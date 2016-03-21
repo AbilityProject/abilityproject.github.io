@@ -1391,7 +1391,7 @@ nav .cart .tag {
   height: 100%;
   content: '';
   background: #394c91;
-  opacity: 0.8;
+  opacity: 0.4;
   z-index: 2;
 }
 .fullscreen-element {
