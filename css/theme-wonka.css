@@ -466,7 +466,7 @@ nav {
 .menu {
   margin: 0;
   display: inline-block;
-  float: left;
+  float: right;
 }
 nav li {
   float: left;
@@ -584,7 +584,7 @@ nav li {
   overflow: hidden;
 }
 .nav-1 ul li {
-  margin-left: -1px;
+  /*margin-left: -1px;*/
 }
 .nav-1 ul:hover {
   overflow: visible;
