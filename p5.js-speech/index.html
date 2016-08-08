@@ -1,0 +1,117 @@
+<html>
+<head>
+<title>p5.speech</title>
+
+</head>
+
+<body link="#EC245E" vlink="#EC245E">
+
+<h1>p5.speech</h1>
+
+<i>created for</i> <a href="http://p5js.org/" target="new">p5.js</a>.<br>
+<i>written by</i> <a href="http://lukedubois.com" target="new">R. Luke DuBois</a><br>
+<a href="http://abilitylab.nyu.edu" target="new">The ABILITY lab</a><br>
+New York University<br>
+
+<br>
+
+<font size=+1 color="#EC245E"><b>p5.speech</b></font> is a JavaScript library that provides simple, clear access to the Web Speech and Speech Recognition APIs, allowing for the easy creation of sketches that can talk and listen.<br>
+<br>
+
+<i>Simple example</i> (Synthesis):<br>
+<code>
+var foo = new P5.Speech(); // speech synthesis object<br>
+foo.speak('hi there'); // say something
+</code>
+<br><br>
+<i>Simple example</i> (Recognition):<br>
+<code>
+var foo = new P5.SpeechRec(); // speech recognition object (will prompt for mic access)<br>
+foo.onResult = showResult; // bind callback function to trigger when speech is recognized<br>
+foo.start(); // start listening<br>
+<br>
+function showResult()<br>
+{<br>
+&nbsp;&nbsp;&nbsp;console.log(foo.resultString); // log the result<br>
+}<br>
+</code>
+
+
+<h3><font color="#EC245E">EXAMPLES:</font></h3>
+
+<i>Speech synthesis:</i><br>
+<a href="./examples/01simple.html">Simple speech synthesis</a> (<a href="https://github.com/IDMNYU/p5.js-speech/blob/master/examples/01simple.html" target="new">source</a>)<br>
+<a href="./examples/02speechbox.html">Speech box example (uses p5.dom)</a> (<a href="https://github.com/IDMNYU/p5.js-speech/blob/master/examples/02speechbox.html" target="new">source</a>)<br>
+<a href="./examples/03callbacks.html">Callback example</a> (<a href="https://github.com/IDMNYU/p5.js-speech/blob/master/examples/03callbacks.html" target="new">source</a>)<br>
+<br>
+<i>Speech recognition</i> (requires Chrome):<br>
+<a href="./examples/04simplerecognition.html">Simple speech recognition</a> (<a href="https://github.com/IDMNYU/p5.js-speech/blob/master/examples/04simplerecognition.html" target="new">source</a>)<br>
+<a href="./examples/05continuousrecognition.html">Continuous recognition example</a> (<a href="https://github.com/IDMNYU/p5.js-speech/blob/master/examples/05continuousrecognition.html" target="new">source</a>)<br>
+
+
+
+<h3><font color="#EC245E">DOWNLOAD:</font></h3>
+<a href="p5.js-speech.zip">Download</a> latest copy of the library.<br>
+<a href="https://github.com/IDMNYU/p5.js-speech" target="new">View</a> on Github.<br>
+
+<h3><font color="#EC245E">REFERENCE:</font></h3>
+
+<h3><code>p5.Speech</code></h3>
+<ul>
+	<li><i>constructor</i>
+		<ul>
+			<li><code><font size=+1>default_voice</font></code>: optional argument to set the default synthesizer voice by number (see <code>listVoices()</code>) or by name.
+		</ul>
+	<li><i>methods</i>
+		<ul>
+			<li><code><font size=+1>cancel()</font></code>: silently cancels the current utterance and clears any queued utterances.
+			<li><code><font size=+1>listVoices()</font></code>: debugging statement.  Lists available synthesis voices to the JavaScript console.
+			<li><code><font size=+1>pause()</font></code>: pause the current utterance.  The <code>onPause()</code> callback will fire.
+			<li><code><font size=+1>resume()</font></code>: resumes the current utterance.  The <code>onResume()</code> callback will fire.
+			<li><code><font size=+1>setLang(language)</font></code>: sets the language interpreter for the synthesizer voice.  Argument is BCP-47; Default is 'en-US'.
+			<li><code><font size=+1>setPitch(pitch)</font></code>: sets playback pitch of synthesized speech from 0.01 (very low) to 2.0 (very high).  Default is 1.0; not supported by all browser / OS combinations.
+			<li><code><font size=+1>setRate(rate)</font></code>: sets rate of speech production from 0.1 (very slow) to 2.0 (very fast).  Default is 1.0; not supported by all browser / OS combinations.
+			<li><code><font size=+1>setVoice(voice)</font></code>: sets synthesizer voice by number (see <code>listVoices()</code>) or by name; equivalent to the <code>default_voice</code> parameter passed with the constructor.
+			<li><code><font size=+1>setVolume(volume)</font></code>: sets synthesizer volume in the range of 0.0 (silent) to 1.0 (default=max volume).
+			<li><code><font size=+1>speak(utterance)</font></code>: instructs the synthesizer to speak the string encoded in <code>utterance</code>.  Depending on the <code>interrupt</code> property, additional calls to <code>speak()</code> will queue after or interrupt speech actively being synthesized.  When synthesis begins, the <code>onStart()</code> callback will fire; when synthesis ends, the <code>onEnd()</code> callback will fire.
+			<li><code><font size=+1>stop()</font></code>: stops the current utterance.  The <code>onEnd()</code> callback will fire.
+		</ul>
+	<li><i>properties</i>
+		<ul>
+			<li><code><font size=+1>interrupt</font></code>: <i>boolean</i> to set whether the <code>speak()</code> method will interrupt (true) or queue after (false = default) existing speech currently being synthesized.
+			<li><code><font size=+1>onEnd</font></code>: <i>function</i> sets callback to fire when an utterance is finished.
+			<li><code><font size=+1>onLoad</font></code>: <i>function</i> sets callback to fire when synthesis voices are loaded.
+			<li><code><font size=+1>onPause</font></code>: <i>function</i> sets callback to fire when an utterance is paused.
+			<li><code><font size=+1>onResume</font></code>: <i>function</i> sets callback to fire when an utterance is resumed.
+			<li><code><font size=+1>onStart</font></code>: <i>function</i> sets callback to fire when synthesis is begun. 
+		</ul>
+</ul>
+
+<h3><code>p5.SpeechRec</code></h3>
+<ul>
+	<li><i>constructor</i>
+		<ul>
+			<li><code><font size=+1>default_language</font></code>: optional argument to set the default BCP-47 language / region to for the speech recognition system.
+		</ul>
+	<li><i>methods</i>
+		<ul>
+			<li><code><font size=+1>start()</font></code>: instructs the speech recognition system to begin listening.  use <code>continuous</code> mode rather than multiple calls to <code>start()</code> for multiple recognition tokens within the same site.
+		</ul>
+	<li><i>properties</i>
+		<ul>
+			<li><code><font size=+1>continuous</font></code>: <i>boolean</i> to set whether the speech recognition engine will give results continuously (true) or just once (false = default).
+			<li><code><font size=+1>interimResults</font></code>: <i>boolean</i> to set whether the speech recognition engine will give faster, partial results (true) or wait for the speaker to pause (false = default).
+			<li><code><font size=+1>onEnd</font></code>: <i>function</i> sets callback to fire when speech recognition ends.
+			<li><code><font size=+1>onError</font></code>: <i>function</i> sets callback to fire when an error occurs on the client side in recording and transmitting the speech.
+			<li><code><font size=+1>onResult</font></code>: <i>function</i> sets callback to fire when synthesis engine has reported a result.
+			<li><code><font size=+1>onStart</font></code>: <i>function</i> sets callback to fire when speech recognition has begun. 
+			<li><code><font size=+1>resultConfidence</font></code>: <i>float</i> value (0.0-1.0) representing the confidence level of the speech synthesizer that <code>resultString</code> is what was actually spoken by the user.
+			<li><code><font size=+1>resultJSON</font></code>: <i>JSON</i> object containing a full set of data returned by the speech recognition system.
+			<li><code><font size=+1>resultString</font></code>: <i>String</i> containing the most recently detected speech.
+			<li><code><font size=+1>resultValue</font></code>: <i>boolean</i> value containing a status flag reported by the server (true = speech successfully recognized).
+		</ul>
+</ul>
+
+
+</body>
+</html>
