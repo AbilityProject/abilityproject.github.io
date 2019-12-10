@@ -1,0 +1,120 @@
+<html>
+<head>
+	<title>Schematics Workshop</title>
+</head>
+<body>
+<h1>Schematics Workshop</h1>
+
+<h2>Intro and Goals of Workshop</h2>
+<ul>
+	<li>Chancey Fleet, Non-Visual Tech Ed and Design, Andrew Heiskell Braille and Talking Book Library</li>
+	<li>Lauren Race, Accessibility Fellow, NYU Ability Project</li>
+	<li>Claire Kearney-Volpe, Accessibility Teacher and Researcher, NYU</li>
+</ul>
+	<span>Today we’re going to use circuit descriptions and tactile schematics for hooking up circuits.</span>
+
+
+<h2>Tour of Components and Symbols</h2>
+
+<p>Schematics are drawings of the relationships between components in an electronic device. 
+They are blueprints used to build circuits.They use symbols that represent real life components. Real world examples of circuits range from a simple electrical fan to the complex of the laptop that you’re on.</p>
+
+We are going to hand out tactile graphics sheets with three columns:
+<ul>
+	<li>Column 1: the physical component glued onto the sheet</li>
+	<li>Column 2: a tactile graphic of the component, scaled up to provide detail</li>
+	<li>Column 3: the schematic symbol</li>
+</ul>
+
+These sheets will cover 7 components:
+
+<ol>
+	<li>220-ohm resistor</li>
+	<li>Piezo</li>
+	<li>Ground</li>
+	<li>Microcontroller</li>
+	<li>Breadboard</li>
+	<li>Jumper cables</li>
+	<li>+V, USB cable</li>
+</ol>
+Now we will explore our Arduino kits. Locate each component. Feel that the breadboard has wires connecting the power and ground buses.
+
+
+<h2>Set Up Your Breadboard and Arduino</h2>
+<ol>
+	<li>Put the breadboard and Uno on the table right next to each other. Put the breadboard to the left of the Uno. Orient the Uno so that the USB input is on the top right corner. Keep it that way the entire exercise.</li>
+
+	<li>Touch the Arduino pins on the right side of the board. Use an unfolded paper clip and count the pins. </li>
+
+	<li>Pins are numbered from 13 (5th pin hole down from the top) to 0 (18th pin hole down from the top)</li>
+
+	<li>Touch the Arduino pins on the left side of the board. Use and unfolded paper clip and count the pins.</li>
+
+	<li>3.3V is the 4th pin down from the top.</li>
+
+	<li>Ground is on the left side, the 6th and 7th pins down from the top, and the right side, the 4th pin down from the top.</li>
+</ol>
+<h2>Basic Screen Reader Workflows for Arduino</h2>
+<p>We’ve pre-programmed your Arduinos with code for you since we only have two hours, but we have information on how to do it yourself at home.</p>
+
+<a href="https://www.arduino.cc/en/Guide/Windows">Install Arduino IDE software for Windows</a>
+<a href="https://www.arduino.cc/en/Guide/MacOSX">
+Install Arduino IDE software for Mac OS X</a>
+<a href="https://www.arduino.cc/en/Guide/Linux">Install Arduino IDE software for Linux</a>
+<a href="https://www.arduino.cc/en/Guide/PortableIDE">Portable IDE (Windows and Linux)</a>
+
+<h3>Steps:</h3>
+
+Install JAVA Access Bridge. Remove all Java spoor from your system:
+	<ol>
+<li>From the search box open Settings, then tab to the list of items and open Apps. Tab until you get to the list of installed apps and arrow down until you hit Java of any flavor. Press return, then tab to remove and follow prompts to uninstall. Shift tab to get back to the list and repeat with any other Java-related items until there are no Java items left.</li>
+<li>Go to the advanced settings dialog and remove any system variables that reference JAVA and remove any java references from the path.
+Reboot your machine just to give yourself that nice fresh feeling.</li>
+<li>Download and install the latest 32-bit JDK from the usual Oracle location. In this case, the package is called jdk-8u144-windows-i586.exe</li>
+<li>Open a command window and enable the jabswitch.
+<li>Launch Arduino and it works!</li>
+<li>Go to Tools > Boards Manager > Select “Arduino Genuino/Uno”</li>
+<li>Go to Tools > Port > Select the port that has “Arduino Genuino/Uno” at the end of the port address
+<li>Delete the default code in the window</li>
+<li>Copy and paste the following code in there instead:</li>
+<p>	
+void setup() {<br>
+  // make the speaker pin an output:<br>
+  pinMode(5, OUTPUT);<br>
+}<br>
+
+void loop() {<br>
+  // turn the speaker on at 440Hz:<br>
+  tone(5, 440);<br>
+  delay(500);<br>
+  // turn the speaker off:<br>
+  noTone(5);<br>
+  delay(500);<br>
+}<br>
+</p>
+<li>Make sure your board is plugged in with the USB and click “Verify”</li>
+<li>Click “Upload”</li>
+</ol>
+
+<h2>Build Circuits with Tactile Schematics and Circuit Descriptions</h2>
+Explore your tactile schematic for a piezo, resistor in series.
+Listen to this circuit description of a piezo, resistor in series.
+Schematic image of speaker circuit with one end of a 220-ohm resistor connected to the same row as pin 5 of the Ardunio. If you’re holding the Aduino so the USB port is on the top right, Pin 5 is on the 13th pin down on the right side. The other end is connected to one of the other short rows of the breadboard. One end of the speaker is attached to that same row. The other end of the speaker is connected to the ground bus on the left side of the board. The Arduino ground pin is on the 4th pin down on the left side of the board.
+Schematic image of a piezo, resistor in series. Begin at pin 5, from there it makes a connection to a 220 ohm resistor. From there make a connection to a piezo speaker. The speaker connects back to Arduino ground.
+Set up your breadboard, while choosing either the tactile schematic and/or the circuit description as a blueprint to do so.
+
+<h2>Run the Code!</h2>
+Did it work? You should hear a repetitive beeping sound coming from the piezo. Troubleshoot if needed.
+
+<h2>Closing/Review</h2>
+Recap
+Schematics are drawings of the relationships between components in an electronic device. They are blueprints used to build circuits. Circuit examples would be a simple flashlight to this laptop. There are symbols that represent real life components. 
+Today we used two different tools: circuit descriptions and tactile schematics as blueprints to hook up circuits.
+We want to improve these tactile schematics as much as possible and would be so thankful for your feedback. We will be hosting optional, paid, volunteer-based interviews after the workshop at Data & Society next door. We can offer a $25 Visa gift card as compensation. Please let us know if you'd be willing to help. Thank you!
+You are welcome to take home your Arduino kits! If you don’t want to shoulder the responsibility or mind a bunch of small components, we can safely hold the equipment for you at the NYU Ability Project, if it makes your life easier. 
+
+
+<h2>References</h2>
+<a href="https://tigoe.github.io/SoundExamples/setup.html">https://tigoe.github.io/SoundExamples/setup.html</a>
+
+</body>
