@@ -39,7 +39,7 @@ These sheets will detail 7 components, in order of how we’ll cover them:
 	<li>Jumper wires</li>
 </ol>
 
-<p>Take 10 minutes to review get familiar with the tactile graphics sheets. Does anyone have questions before we move on to exploring our Arduino kits?</p>
+<p>Take 10 minutes to review and get familiar with the tactile graphics sheets. [After 10 minutes] Does anyone have questions before we move on to exploring our Arduino kits?</p>
 
 <h3>Arduino Kits</h3>
 
@@ -49,27 +49,32 @@ These sheets will detail 7 components, in order of how we’ll cover them:
 
 	<li>Locate each component.</li>
 
-	<p>	In the largest compartment, you will find an Arduino in a box and a breadboard with the power and ground buses connected to each other with jumper wires. There are two smaller compartments. In one,there’s one USB cord. In the other, you will find four items: 
+	<p>	In the largest compartment, you will find an Arduino in a box and a breadboard with the power and ground buses connected to each other with jumper wires. There are two smaller compartments. In one, there’s one USB cord. In the other, you will find four items: 
 	<ul>
-		<li>two jumper cables </li>
+		<li>two jumper cables</li>
 		<li>a 220-ohm resistor</li>
 		<li>a piezo buzzer</li>
-		<li>a paperclip. </li>
+		<li>a paperclip.</li>
 	</ul>
 </p>
 	<li>Explore each component.</li>
 <ul>
+
+<h3> Arduino</h3>	
+
 <li>Moving back to the larger compartment, locate the Arduino and take it out of its box. </li>
 
-<li>The Arduino is a rectangular shape. On one of the shorter sides, touch the large, metal, cube. That is the USB port and we’ll need that later. Rotate the Arduino so the square USB port is on the upper right hand corner. That’s how we’ll orient the board today.</li>
+<li>The Arduino is a rectangular shape. On one of the shorter sides, you should be able to locate a large, metal, cube. That is the USB port and we’ll need that later. Rotate the Arduino so the square USB port is on the upper right hand corner. That’s how we’ll orient the board today.</li>
 
 <li>If you feel along the long side of the Arduino, there are parallel plastic walls on either side. These are the rows of pin inputs.</li>
 
-<li>Unfold your paperclip and run the tip of it along the top of the walls and feel the holes. These holes are your pin inputs.</li>
+<li>Unfold your paperclip and run the tip of it along the top of the walls. You should be able to feel that there are tiny pin holes on the top. These holes are your pin inputs.</li>
+
+<h4>Left-side pins</h4>
 
 <li>We count the pins on the left side from top to bottom.</li>
 
-<li>We count the pins on the right side from bottom to top. Starting at the top left of the Arduino board, and counting the pins down, we get the reset, power and ground pins (Since the Arudino is a computer and it has to have a power cord and a reset button). The pins from the top-left going down are as follows:</li>
+<li>Starting at the top left of the Arduino board, and counting the pins down, we get the reset, power and ground pins (Since the Arudino is a computer and it has to have a power cord and a reset button). Let's use the paper clip to follow the description of each. The pins from the top-left going down are as follows:</li>
 <ol>
 	<li>Power: physical pin 1</li>
 	<li>Ground: physical pin 2</li>
@@ -92,7 +97,9 @@ These sheets will detail 7 components, in order of how we’ll cover them:
 	<li>A5: physical pin 14</li>
 </ol>
 
-<li>On the right side, going up from the bottom we get our digital inputs, 0-13, followed by another ground and a couple of special function pins we won’t use here today. </li>
+<h4>Right-side pins</h4>
+
+<li>We count the pins on the right side of the board from bottom to top. On the right side of your arduino, start from the bottom. Here, we get our digital inputs 0-13, followed by another ground and a couple of special function pins that we won’t use here today. So, starting from the bottom right, lets review what each pin is.</li>
 	<ul>
 		<li>0: physical pin 1</li>
 		<li>1:  physical pin 2</li>
@@ -114,20 +121,32 @@ These sheets will detail 7 components, in order of how we’ll cover them:
 		<li>Special function pin: physical pin 18</li>
 </ul>
 
-	<li>Let’s orient the breadboard by the three bumps along the shorter end, and have them closest to you.
-	<li>Compare the breadboard and your tactile graphic of the breadboard. The tactile graphic emphasizes, more than the physical breadboard, that there are two vertical columns on the left side and two vertical columns on the right side of the breadboard. These vertical columns on each side are called buses. They contain pin holes that are connected to one other. Feel on the tactile graphic the connection between the pin holes on both buses. For each individual vertical column of pin holes, electrical current runs vertically throughout the column. The grid of pin holes between the two buses, connect horizontally.</li>
-	<li>Use the tactile graphic labels to locate both power buses and both ground buses. Power is your source of electricity, in our case it’s the USB cable that will go into our computer. Ground absorbs electricity so that we don’t short circuit our electronics (damage our Arduino). If you want to learn more after the workshop, you can read about the basics on the <a href="https://itp.nyu.edu/physcomp/lessons/electronics/electricity-the-basics/">ITP Physical Computing Site</a></li>
-	<li>The physical breadboard has the same pattern of connection, but it’s under the shell of the board and cannot be felt.</li>
-	<li>Let’s refocus on the physical breadboard. Know that the top of the breadboard is facing up. The texture is the grid of pin holes you felt in the tactile graphic.</li>
-	<li>Also closest to you, on the breadboard, are jumper wires that are connecting the buses that run along the left and right sides of the breadboard.</li>
-	<li>Let’s find the leftmost jumper wire. You’ll feel a small cylinder and that’s where the wire connects to the breadboard.</li>
-	<li>Follow that wire over to the other side. This wire connects the power bus to the other power bus.</li>
-	<li>Now find the cylinder of the jumper that is all the way to the right. You can follow that wire, which goes from one ground bus to the other ground bus.</li>
-	<li>Pick up your piezo buzzer and the piezo buzzer tactile graphic. Feel that there is a longer and shorter pin at the bottom of the buzzer.</li>
-	<li>The longer pin is called the anode. The plus indicates that the anode draws the power into the buzzer. </li>
-	<li>The shorter pin is called the cathode and the negative sign indicates that that pin needs to be connected to ground.</li>
-</li>
-</ul>
+<h3>Breadboard</h3>
+<ul>
+		<li>In the large compartment of the bento box, you should also have a breadboard. Let's take that out.</li>
+		<li>Orient the breadboard by the three bumps along the shorter end, and have them closest to you.</li>
+		<li>Compare the breadboard and your tactile graphic of the breadboard. The tactile graphic emphasizes, more than the physical breadboard, that there are two vertical columns on the left side and two vertical columns on the right side of the breadboard. These vertical columns on each side are called buses. They contain pin holes that are connected to one other. Feel on the tactile graphic the connection between the pin holes on both buses. For each individual vertical column of pin holes, electrical current runs vertically throughout the column. The grid of pin holes between the two buses, connect horizontally.</li>
+		<li>Use the tactile graphic labels to locate both power buses and both ground buses. Power is your source of electricity, in our case it’s the USB cable that will go into our computer. Ground absorbs electricity so that we don’t short circuit our electronics (damage our Arduino). If you want to learn more after the workshop, you can read about the basics on the <a href="https://itp.nyu.edu/physcomp/lessons/electronics/electricity-the-basics/">ITP Physical Computing Site</a></li>
+		<li>The physical breadboard has the same pattern of connection, but it’s under the shell of the board and cannot be felt.</li>
+		<li>Let’s refocus on the physical breadboard. Know that the top of the breadboard is facing up. The texture is the grid of pin holes you felt in the tactile graphic.</li>
+	</ul>
+	
+	<h3>Jumper Wires</h3>
+	<ul>
+		<li>Also closest to you, on the breadboard, are jumper wires that are connecting the buses that run along the left and right sides of the breadboard.</li>
+		<li>Let’s find the leftmost jumper wire. You’ll feel a small cylinder and that’s where the wire connects to the breadboard.</li>
+		<li>Follow that wire over to the other side. This wire connects the power bus to the other power bus.</li>
+		<li>Now find the cylinder of the jumper that is all the way to the right. You can follow that wire, which goes from one ground bus to the other ground bus.</li>
+	</ul>
+	
+	<h3>Piezo</h3>
+	<ul>
+		<li>Pick up your piezo buzzer and the piezo buzzer tactile graphic. Feel that there is a longer and shorter pin at the bottom of the buzzer.</li>
+		<li>The longer pin is called the anode. The plus indicates that the anode draws the power into the buzzer. </li>
+		<li>The shorter pin is called the cathode and the negative sign indicates that that pin needs to be connected to ground.</li>
+	</ul>
+
+
 </ol>
 
 <h2>Set Up Your Breadboard and Arduino</h2>
@@ -161,14 +180,14 @@ These sheets will detail 7 components, in order of how we’ll cover them:
 </ul>
 
 <h2>Plug in your USB to your computer!</h2>
+
 <p>Did it work? You should hear a repetitive beeping sound coming from the piezo. Troubleshoot if needed.</p>
 
 <h2>Closing/Review</h2>
 
 <p>Schematics are drawings of the relationships between components in an electronic device. They are blueprints used to build circuits. Circuit examples would be a simple flashlight to this laptop. There are symbols that represent real life components. </p>
 
-<p>Today we used two different tools: circuit descriptions and tactile schematics as blueprints to hook up circuits.
-We want to improve these tactile schematics as much as possible and would be so thankful for your feedback. We will be hosting optional, paid, volunteer-based interviews after the workshop at Data & Society next door. We can offer a $25 Visa gift card as compensation. Please let us know if you'd be willing to help. Thank you!</p>
+<p>Today we used two different tools: circuit descriptions and tactile schematics as blueprints to hook up circuits. We want to improve these tactile schematics as much as possible and would be so thankful for your feedback. We will be hosting optional, paid, volunteer-based interviews after the workshop at Data & Society next door. We can offer a $25 Visa gift card as compensation. Please let us know if you'd be willing to help. Thank you!</p>
 
 <p>You are welcome to take home your Arduino kits! If you don’t want to shoulder the responsibility or mind a bunch of small components, we can safely hold the equipment for you at the NYU Ability Project, if it makes your life easier. </p>
 
